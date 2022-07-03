@@ -42,7 +42,7 @@ export class UtilsService {
       {
         img: '/assets/Figura-Icone-Telefone-PNG-1024x1024.png',
         buttonMsg: 'Converse com um de nosses vendedores',
-        href: 'tel08007268300',
+        href: 'tel:08007268300',
       },
       {
         img: '/assets/whatsapp-logo.png.webp',

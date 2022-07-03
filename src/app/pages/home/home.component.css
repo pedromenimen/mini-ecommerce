@@ -1,3 +1,7 @@
 app-card{
   @apply m-2
 }
+
+.container {
+  @apply md:flex md:flex-wrap md:flex-row flex flex-col items-center max-w-[60vw]
+}

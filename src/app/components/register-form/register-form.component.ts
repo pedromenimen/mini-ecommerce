@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -23,7 +24,8 @@ export class RegisterFormComponent implements OnInit {
     private formbuilder: FormBuilder,
     private _snackBar: MatSnackBar,
     private cepApiServiceService: CepApiServiceService,
-    private utilsService: UtilsService
+    private utilsService: UtilsService,
+    private router: Router
   ) {
     this.formulario = this.formbuilder.group({
       cep: [null],
@@ -117,6 +119,7 @@ export class RegisterFormComponent implements OnInit {
       this.cepApiServiceService.registerUser(this.formulario.value).subscribe({
         next: () => {
           this.openSnackBar('Conta criada com sucesso.', 'fechar');
+          this.router.navigate(['login']);
         },
         error: (response) => {
           this.openSnackBar(

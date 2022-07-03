@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { CepApiServiceService } from './../../services/cep-api-service.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class LoginFormComponent implements OnInit {
   constructor(
     private _snackBar: MatSnackBar,
     private formbuilder: FormBuilder,
-    private cepApiServiceService: CepApiServiceService
+    private cepApiServiceService: CepApiServiceService,
+    private router: Router
   ) {
     this.formulario = this.formbuilder.group({
       email: [null],
@@ -45,14 +47,15 @@ export class LoginFormComponent implements OnInit {
   onSubmit() {
     this.cepApiServiceService.loginUser(this.formulario.value).subscribe({
       next: (response) => {
-        console.log(response);
         this.openSnackBar('Bem vindo', 'fechar');
         if (typeof response['token'] === 'string') {
           localStorage.setItem('token', response['token']);
         }
+        this.router.navigate(['']);
       },
       error: (response) => {
-        console.log(response);
+        let key = Object.getOwnPropertyNames(response.error)
+        this.openSnackBar(response.error[key[0]], 'fechar');
       },
     });
   }

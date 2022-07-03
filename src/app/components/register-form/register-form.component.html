@@ -1,0 +1,98 @@
+<head>
+  <script>
+
+
+
+  </script>
+</head>
+
+<!-- <form [formGroup]="form" method="get" action=".">
+  <label>Cep:
+    <input name="cep" type="text" value="" size="10" maxlength="9" #cep
+      (onblur)="pesquisacep(cep.value);" /></label><br />
+  <label>Rua:
+    <input name="rua" type="text" size="60" #rua /></label><br />
+  <label>Bairro:
+    <input name="bairro" type="text" size="40" #bairro /></label><br />
+  <label>Cidade:
+    <input name="cidade" type="text" size="40" #cidade /></label><br />
+  <label>Estado:
+    <input name="uf" type="text" size="2" #uf /></label><br />
+  <label>IBGE:
+    <input name="ibge" type="text" size="8" #ibge /></label><br />
+</form> -->
+<!--
+<form method="get" action="." [formGroup]="formulario" class="dire">
+  <mat-form-field appearance="outline">
+    <mat-label>CEP</mat-label>
+    <input #cep matInput name="cep" type="text" maxlength="9" (onblur)="pesquisacep(cep.value)">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Rua</mat-label>
+    <input #rua matInput name="rua" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Bairro</mat-label>
+    <input #bairro matInput name="bairro" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cidade</mat-label>
+    <input #cidade matInput name="cidade" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>UF</mat-label>
+    <input #uf matInput name="uf" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>IBGE</mat-label>
+    <input #ibge matInput name="ibge" type="text">
+  </mat-form-field>
+</form> -->
+
+<form class="w-full max-w-lg" method="get" action=".">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label>
+        CEP
+      </label>
+      <input #cep type="text" maxlength="8" (blur)="pesquisacep(cep.value)"/>
+      <p *ngIf="" class="text-red-500 text-xs italic">Please fill out this field.</p>
+    </div>
+    <div class="w-full md:w-1/2 px-3">
+      <label>
+        Rua
+      </label>
+      <input #rua type="text">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-3">
+      <label>
+        Bairro
+      </label>
+      <input #bairro type="password">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-2">
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label>
+        Cidade
+      </label>
+      <input #cidade type="text">
+    </div>
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label>
+        UF
+      </label>
+      <div class="relative">
+        <input #uf type="text">
+      </div>
+    </div>
+    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <label>
+        IBGE
+      </label>
+      <input #ibge type="text">
+    </div>
+  </div>
+</form>

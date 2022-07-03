@@ -1,0 +1,12 @@
+form {
+  @apply flex flex-col w-4/6 left-1/2 -translate-x-1/2 relative bg-gray-400 rounded-lg mt-16 p-8 border;
+}
+
+input {
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500;
+}
+
+label {
+  @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+}
+

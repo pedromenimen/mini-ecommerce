@@ -20,5 +20,11 @@ export interface FormBuilderValues {
 }
 
 export interface APIResponse {
-  [key: string]: string | Array<string>
+  [key: string]: string | Array<string>;
+}
+
+export interface Channel {
+  img: string;
+  buttonMsg: string;
+  href: string
 }

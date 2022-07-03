@@ -1,0 +1,3 @@
+img {
+ @apply h-[20vh] self-center left-1/2 -translate-x-1/2 relative min-w-[11vw]
+}

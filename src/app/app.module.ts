@@ -12,10 +12,12 @@ import { AppComponent } from './app.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RegisterFormComponent, LoginFormComponent],
+  declarations: [AppComponent, HomeComponent, RegisterFormComponent, LoginFormComponent, NavbarComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

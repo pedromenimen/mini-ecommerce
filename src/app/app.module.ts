@@ -11,9 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RegisterFormComponent],
+  declarations: [AppComponent, HomeComponent, RegisterFormComponent, LoginFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

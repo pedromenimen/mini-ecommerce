@@ -10,3 +10,15 @@ export interface CepResponse {
   ddd: string;
   siafi: string;
 }
+
+export interface FormBuilderValues {
+  cep: string;
+  number: string;
+  email: string;
+  password: string;
+  name: string;
+}
+
+export interface APIResponse {
+  [key: string]: string | Array<string>
+}

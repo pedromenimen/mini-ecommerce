@@ -122,6 +122,7 @@ export class RegisterFormComponent implements OnInit {
       formData.bairro = this.bairro.nativeElement.value;
       formData.uf = this.uf.nativeElement.value;
       formData.rua = this.rua.nativeElement.value;
+      formData.cidade = this.cidade.nativeElement.value;
       this.cepApiServiceService.registerUser(formData).subscribe({
         next: () => {
           this.openSnackBar('Conta criada com sucesso.', 'fechar');

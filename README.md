@@ -10,3 +10,14 @@ No terminal, digite os seguintes comandos:
 - ng serve (a aplicação estará disponível na porta 4200 localmente)
 
 A aplicação pode ser acessada [nesse link](https://mini-ecommerce-gules.vercel.app)
+
+# Tecnologias Utilizadas
+
+- Typescript
+- Angular
+- Deploy Vercel
+
+# Bibliotecas Utilizadas
+
+- TailwindCSS
+- Angular Materials

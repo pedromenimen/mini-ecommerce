@@ -21,3 +21,4 @@ A aplicação pode ser acessada [nesse link](https://mini-ecommerce-gules.vercel
 
 - TailwindCSS
 - Angular Materials
+- Flowbite

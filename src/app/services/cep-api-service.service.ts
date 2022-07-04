@@ -21,6 +21,10 @@ export class CepApiServiceService {
       address: {
         cep: data.cep,
         number: data.number,
+        bairro: data.bairro,
+        cidade: data.cidade,
+        rua: data.rua,
+        uf: data.uf,
       },
     };
     return this.http.post<any>(

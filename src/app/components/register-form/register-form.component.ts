@@ -1,7 +1,7 @@
-import { Router } from '@angular/router';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { CepApiServiceService } from './../../services/cep-api-service.service';
 import { UtilsService } from './../../services/utils.service';
 
@@ -24,15 +24,18 @@ export class RegisterFormComponent implements OnInit {
     private formbuilder: FormBuilder,
     private _snackBar: MatSnackBar,
     private cepApiServiceService: CepApiServiceService,
-    private utilsService: UtilsService,
     private router: Router
   ) {
     this.formulario = this.formbuilder.group({
-      cep: [null],
-      number: [null],
+      name: [null],
       email: [null],
       password: [null],
-      name: [null],
+      cep: [null],
+      number: [null],
+      cidade: [null],
+      rua: [null],
+      uf: [null],
+      bairro: [null],
     });
   }
 
@@ -116,16 +119,19 @@ export class RegisterFormComponent implements OnInit {
     } else if (this.password.nativeElement.value.length < 8) {
       this.openSnackBar('A senha é muito curta', 'fechar');
     } else {
-      this.cepApiServiceService.registerUser(this.formulario.value).subscribe({
+      let formData = this.formulario.value
+      formData.bairro = this.bairro.nativeElement.value
+      formData.uf = this.uf.nativeElement.value
+      formData.rua = this.rua.nativeElement.value
+      this.cepApiServiceService.registerUser(formData).subscribe({
         next: () => {
           this.openSnackBar('Conta criada com sucesso.', 'fechar');
           this.router.navigate(['login']);
         },
         error: (response) => {
-          this.openSnackBar(
-            this.utilsService.capitalizer(response.error.email),
-            'fechar'
-          );
+          console.log(response);
+          let key = Object.getOwnPropertyNames(response.error);
+          this.openSnackBar(response.error[key[0]], 'fechar');
         },
       });
     }

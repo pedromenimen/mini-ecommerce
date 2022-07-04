@@ -17,6 +17,10 @@ export interface FormBuilderValues {
   email: string;
   password: string;
   name: string;
+  bairro: string;
+  cidade: string;
+  rua: string;
+  uf: string;
 }
 
 export interface APIResponse {
@@ -26,5 +30,5 @@ export interface APIResponse {
 export interface Channel {
   img: string;
   buttonMsg: string;
-  href: string
+  href: string;
 }

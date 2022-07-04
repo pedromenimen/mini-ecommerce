@@ -31,23 +31,34 @@ export class UtilsService {
     return [
       {
         img: '/assets/Bemol.logo.png',
-        buttonMsg: 'Acesse o site da bemol',
+        description: 'Compre conosco pelo nosso site.',
         href: 'https://www.bemol.com.br ',
+        socialMedia: false,
       },
       {
         img: '/assets/BOB-ICON1.webp',
-        buttonMsg: 'Converse com o Bot Online da Bemol',
+        description: 'Compre conosco pelo Bot Online da Bemol.',
         href: 'https://chat.bemol.com.br',
+        socialMedia: false,
       },
       {
         img: '/assets/Figura-Icone-Telefone-PNG-1024x1024.png',
-        buttonMsg: 'Converse com um de nosses vendedores',
+        description: 'Compre com um de nosses vendedores.',
         href: 'tel:08007268300',
+        socialMedia: false,
       },
       {
         img: '/assets/whatsapp-logo.png.webp',
-        buttonMsg: 'Converse conosco pelo whatsapp',
+        description: 'Compre conosco pelo whatsapp.',
         href: 'https://bit.ly/WppBemol',
+        socialMedia: false,
+      },
+      {
+        img: '/assets/bemol-farma-logo.png',
+        description:
+          'Compre produtos farmacêuticos pelo nosso site da bemol farma.',
+        href: 'https://www.bemolfarma.com.br',
+        socialMedia: false,
       },
     ];
   }

@@ -6,7 +6,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
@@ -31,12 +30,10 @@ import { RegisterComponent } from './pages/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    NgbModule,
     MatSnackBarModule,
     HttpClientModule,
     RouterModule,

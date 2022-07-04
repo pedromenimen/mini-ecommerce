@@ -29,6 +29,7 @@ export interface APIResponse {
 
 export interface Channel {
   img: string;
-  buttonMsg: string;
+  description: string;
   href: string;
+  socialMedia: boolean;
 }
